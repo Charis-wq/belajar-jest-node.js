@@ -1,0 +1,39 @@
+Unit Test
+unit test akan fokus meguji bagian kode program terkecil, biasnya meguji sebuah method
+unit test biasanya di buat kecil dan cepat, oleh karena itu biasanya kadang kode unit test lebih banayak dari kode pemograman aslinya, karena semua skenario pengujian akan deicoba di unit test
+unt test bisa digunakan sebagai cara untuk meningkatakan kualitas pemograman kode kita.
+
+
+PENGENALAN JEST
+NodeJs Assertion Package
+modejs sendiri sebenarnya memiliki package untuk assertion, tapi jarang sekali orang yang menngunakan package tersebut
+https://node.js/api/assert.html
+program Nodejs kebanyakan menggunakan liberary yang lebih baik untuk melakukan unit test.
+
+NodeJS Unit Test Liberary 
+sebenarnya ada banyak sekali liberary opensource yang bisa kita gunakan untuk melakukan unit test di Nodejs
+JEST
+MOCHA
+JASMINE
+dan masih banyak yang lain
+
+Pengenalan JEST
+ jest adalah salah satu liberary untuk unit test nodejs yang sangat popular
+ jest sendiri di buat oleh Facebook
+ jest terintegarasi dengan baik dengan banyak teknologi seperti NodeJS,ReactJS,VueJS dan lain-lain
+ jest sendiri berfokus dalam kesedrhanaan, sehingga penggunaannya sangat mudah bagi pemula yang ingin mencoba unit test.
+
+Menginstal Jest 
+ jest digunakan untuk membuat unit test saja, sehingga kita tidak perlu menambahkan sebagai dipendency production
+ kita cukup tambahkan sebagai deveploment dependency
+ kita bisa tambahkan di package.json atau menngunakan perintah npm install jest --save-deveploment
+
+Menjalankan Unit Test 
+ untuk menjalankan unit test menggunakan jest,kita bisa jalankan file jest yang berada di node_modules/.bin/jest
+ tapi kita bisa mempermudahnya menggunakan script di package, cukup ketikan kode programnya saja di bagian script test
+
+NPX
+ menjalankan perintah jest lumayan ribet karena kita harus selalu menjalankan melalui folder node_modules/.bin/jest 
+ untungnya di nodejs terdapat program bernama NPX(Node Package Runner) 
+ NPX ini digunakan sepsial untuk menjalankan perintah yang bisa secara otomatis mendeteksi file yang terdapat di node_modules/.bin/jest
+ untuk menjalankan jest,kita bisa menggunakan perinta: npx jest  

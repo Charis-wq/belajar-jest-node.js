@@ -2,14 +2,21 @@
   "name": "belajar-unittest-jest",
   "version": "1.0.0",
   "description": "belajar unit test jest",
-  "main": "index.js",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Charis-wq/belajar-jest-node.js"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "k0nf0y12"
   ],
   "author": "Abdul Charis",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
