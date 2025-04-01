@@ -1,0 +1,15 @@
+{
+  "name": "belajar-unittest-jest",
+  "version": "1.0.0",
+  "description": "belajar unit test jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "k0nf0y12"
+  ],
+  "author": "Abdul Charis",
+  "license": "ISC",
+  "type": "module"
+}
