@@ -18,22 +18,61 @@ JASMINE
 dan masih banyak yang lain
 
 Pengenalan JEST
- jest adalah salah satu liberary untuk unit test nodejs yang sangat popular
- jest sendiri di buat oleh Facebook
- jest terintegarasi dengan baik dengan banyak teknologi seperti NodeJS,ReactJS,VueJS dan lain-lain
- jest sendiri berfokus dalam kesedrhanaan, sehingga penggunaannya sangat mudah bagi pemula yang ingin mencoba unit test.
+jest adalah salah satu liberary untuk unit test nodejs yang sangat popular
+jest sendiri di buat oleh Facebook
+jest terintegarasi dengan baik dengan banyak teknologi seperti NodeJS,ReactJS,VueJS dan lain-lain
+jest sendiri berfokus dalam kesedrhanaan, sehingga penggunaannya sangat mudah bagi pemula yang ingin mencoba unit test.
 
 Menginstal Jest 
- jest digunakan untuk membuat unit test saja, sehingga kita tidak perlu menambahkan sebagai dipendency production
- kita cukup tambahkan sebagai deveploment dependency
- kita bisa tambahkan di package.json atau menngunakan perintah npm install jest --save-deveploment
+jest digunakan untuk membuat unit test saja, sehingga kita tidak perlu menambahkan sebagai dipendency production kita cukup tambahkan sebagai deveploment dependency kita bisa tambahkan di package.json atau menngunakan perintah npm install jest --save-deveploment
 
-Menjalankan Unit Test 
- untuk menjalankan unit test menggunakan jest,kita bisa jalankan file jest yang berada di node_modules/.bin/jest
- tapi kita bisa mempermudahnya menggunakan script di package, cukup ketikan kode programnya saja di bagian script test
+Menjalankan Unit Test  untuk menjalankan unit test menggunakan jest,kita bisa jalankan file jest yang berada di node_modules/.bin/jest tapi kita bisa mempermudahnya menggunakan script di package, cukup ketikan kode programnya saja di bagian script test
 
 NPX
- menjalankan perintah jest lumayan ribet karena kita harus selalu menjalankan melalui folder node_modules/.bin/jest 
- untungnya di nodejs terdapat program bernama NPX(Node Package Runner) 
- NPX ini digunakan sepsial untuk menjalankan perintah yang bisa secara otomatis mendeteksi file yang terdapat di node_modules/.bin/jest
- untuk menjalankan jest,kita bisa menggunakan perinta: npx jest  
+menjalankan perintah jest lumayan ribet karena kita harus selalu menjalankan melalui folder node_modules/.bin/jest 
+untungnya di nodejs terdapat program bernama NPX(Node Package Runner)  NPX ini digunakan sepsial untuk menjalankan perintah yang bisa secara otomatis mendeteksi file yang terdapat di node_modules/.bin/jest untuk menjalankan jest,kita bisa menggunakan perinta: npx jest 
+
+Pengenalan Babel
+kekurangan jest 
+sejak berawal belajar nodejs kita selalu menggunakan javascript modul 
+sayangnya sampai version sekarang jest belum mendukung javascript modules masih menggunakan cara lama menggunakan commonjs dengan memanfaatkan function requeir()
+untungnya ada liberary yang bernama babel yang bisa kita gunakan untuk membantu jest.
+
+Jest Code Transformation
+jest mendukung code transformation yaitu fitur dimana kita bisa melakukan pengubahan koede program sebelum dijalankan oloh jest
+fitur ini di manfaatkan untuk melakukan kompilasi ke kode javascript yang bisa dimengerti oleh jest memanfaatkan liberary babel.
+
+Babel
+adalah javascript compailer yang digunakan untuk melakukan kompilasi kode javascript ke kode javascript yang berbeda versi, biasanya untuk ke versi yang lebih lama agar kompiteble dengan browser versi lama.
+dengan babel kita bisa membuat kode program dengan fitur javascript terbaru sperti modules tapi bisa dicompaile menjadi kode javascript lama sehinnga compatible ketika dijalnkan oleh teknologi loama atau yang belum mendukung fitur javascript baru.
+
+Integrasi Babel dan Jest
+jest terintergrasi dengan baik dengan babel, sehingga jest bisa secara otomatis melakukan kompilasi kode javascrtipt unit test kita dengan babel dan menjalankan kode javascript dengan versi yang kompatibel dengan jest
+
+Jest Configuration 
+jest memiliki banyak konfogurasi namun jika kita tidak ubah konfigurasinya jest sudah memiliki default konfigurasi 
+ada banyak sekali konfigurasi yang terdapat di jest.
+
+File Konfigurasi 
+Jestjest sendiri mendukung 2cara untuk menyimpan data konfigurasi 
+pertama menyimpan file package.json dengan key-jest
+kedua dengan menyimpan sebagai file javascript di file jest.config.js/ts/mjs atau membuatnya secara otomatis dengan perintah jest --Integrasi
+jika menggunakan konfigurasi file jest.config.js/ts/mjs jangan lupa untuk memindahkan konfigurasi jest di package.json.
+
+Pengaturan konfigurasi
+konfigurasi di jest sangat sederhana cukup gunakan key-value
+
+Jest Command Line Interface
+saat kita menginstal dependency jest ke project kita terdapat file jast di dalam folder node_modules/.bin 
+dan untuk menjalankan unit test kits bisa gunakan program jest 
+jest sendiri sebenarnyak banyak perintah tambahanya, dan kita perlu memanfatkanya jadi tidak hanya megetikan perintah jest sajauntuk melihat detailnya yang bisa kita gunakan silahkan gunakan perintah jest --help.
+
+Matchers
+saat kita membuat unit test hal yang dilakunan adalah memiliki ekspektasi 
+contoh pada kode sum() sebelumnya ketika kita panggil function sum() dengan parameter 1 dan 2 ekspektasimkita adalah hasil return dari function sum() adalah 3
+hal ini di namakan Matchers
+
+Excpect Function 
+matchers di jest di representasikan dalam sebuah function bernama excpect(value) 
+function excpect() mengembalikan object matchers yang bisa kita gunakan untuk mengetest value yang kita excpect 
+ada banyak sekali function untuk melakukan test di matchers kita bisa membacanya di dalam halaman dokumentasi API untuk function excpect(). 
